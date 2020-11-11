@@ -67,7 +67,54 @@
 // teo.showInfo()
 
 // 8 : Các phép so sánh 
-// NaN
-var a = undefined
-var b = 0
-console.log(a + b)
+// NaN : không phải là số
+// var a = undefined
+// var b = 0
+// console.log(a + b)
+
+// 9 : Vòng lặp
+
+// 1 -> 100
+// in số chẳn
+// in số lẻ
+// in số chia 3 dư 1
+// in số chính phương ( Số lấy căn 2)
+
+function inSoChan(){
+    for (var index = 1; index <= 100; index++) {
+       if (index % 2 == 0) {
+           console.log(index)
+       }
+    }
+}
+function inSoLe(){
+    for (var index = 1; index <= 100; index++) {
+       if (index % 2 == 1) {
+           console.log(index)
+       }
+    }
+}
+
+function inSoChia3Du1(){
+    for (var index = 1; index <= 100; index++) {
+       if (index % 3 == 1) {
+           console.log(index)
+       }
+    }
+}
+
+function inSo(sodu , sochia){
+    for (var index = 1; index <= 100; index++) {
+        if (index % sochia == sodu) {
+            console.log(index)
+        }
+     }
+}
+
+function inSoChinhPhuong(){
+    for (var index = 1; index <= 100; index++) {
+       if (Math.sqrt(index) % 1 == 0) {
+           console.log(index)
+       }
+    }
+}
