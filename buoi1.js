@@ -20,8 +20,25 @@
 // console.log(teo["names"])
 
 // 3 : Object
-const teo = {
-    name :  "Nguyen Van teo",
-    age : 10
-}
-console.log(teo["names"])
+// const teo = {
+//     name :  "Nguyen Van teo",
+//     age : 10
+// }
+// console.log(teo["names"])
+
+// 4 : Array
+// const arrNames = ["Teo","Ti","Tun","Tuan"]
+// console.log(arrNames[0])
+
+// 5 : Toán tử
+var a = 5
+var b = 5
+
+var ketQua = a++ - --b - ++b + a-- - --a + b--
+// 5 - --b - ++b + a-- - --a + b--     a = 6 , b = 5
+// 5 - 4 - ++b + a-- - --a + b--     a = 6 , b = 4
+// 5 - 4 - 5 + a-- - --a + b--     a = 6 , b = 5
+// 5 - 4 - 5 + 6 - --a + b--     a = 5 , b = 5
+// 5 - 4 - 5 + 6 - 4 + 5     a = 4 , b = 4
+// 3
+console.log(ketQua)
