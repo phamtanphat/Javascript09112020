@@ -57,11 +57,17 @@
 
 // 7 : Object method
 
-const teo = {
-    name : "Nguyen Van Teo",
-    age : 10,
-    showInfo : function () {
-        console.log(this.name , this.age)
-    }
-}
-teo.showInfo()
+// const teo = {
+//     name : "Nguyen Van Teo",
+//     age : 10,
+//     showInfo : function () {
+//         console.log(this.name , this.age)
+//     }
+// }
+// teo.showInfo()
+
+// 8 : Các phép so sánh 
+// NaN
+var a = undefined
+var b = 0
+console.log(a + b)
