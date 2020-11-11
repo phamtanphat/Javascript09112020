@@ -12,3 +12,16 @@
 // TH1 : Khai báo bằng từ khóa var nhưng không gán giá trị
 // var a 
 // console.log(a)
+// TH2 : Truy vấn tới thuộc tính không tồn tại trong object
+// const teo = {
+//     name :  "Nguyen Van teo",
+//     age : 10
+// }
+// console.log(teo["names"])
+
+// 3 : Object
+const teo = {
+    name :  "Nguyen Van teo",
+    age : 10
+}
+console.log(teo["names"])
