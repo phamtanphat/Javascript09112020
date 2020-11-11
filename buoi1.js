@@ -18,6 +18,11 @@
 //     age : 10
 // }
 // console.log(teo["names"])
+// TH3 : function không có return hoặc chỉ return
+// function doSth(action){
+//     console.log(action)
+//     return
+// }
 
 // 3 : Object
 // const teo = {
@@ -31,14 +36,32 @@
 // console.log(arrNames[0])
 
 // 5 : Toán tử
-var a = 5
-var b = 5
+// var a = 5
+// var b = 5
 
-var ketQua = a++ - --b - ++b + a-- - --a + b--
+// var ketQua = a++ - --b - ++b + a-- - --a + b--
 // 5 - --b - ++b + a-- - --a + b--     a = 6 , b = 5
 // 5 - 4 - ++b + a-- - --a + b--     a = 6 , b = 4
 // 5 - 4 - 5 + a-- - --a + b--     a = 6 , b = 5
 // 5 - 4 - 5 + 6 - --a + b--     a = 5 , b = 5
 // 5 - 4 - 5 + 6 - 4 + 5     a = 4 , b = 4
 // 3
-console.log(ketQua)
+// console.log(ketQua)
+
+// 6 : Function
+// function doSth(action){
+//     console.log(action)
+//     return
+// }
+// console.log(doSth)
+
+// 7 : Object method
+
+const teo = {
+    name : "Nguyen Van Teo",
+    age : 10,
+    showInfo : function () {
+        console.log(this.name , this.age)
+    }
+}
+teo.showInfo()
