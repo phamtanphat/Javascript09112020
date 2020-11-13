@@ -103,14 +103,6 @@ function inSoChia3Du1(){
     }
 }
 
-function inSo(sodu , sochia){
-    for (var index = 1; index <= 100; index++) {
-        if (index % sochia == sodu) {
-            console.log(index)
-        }
-     }
-}
-
 function inSoChinhPhuong(){
     for (var index = 1; index <= 100; index++) {
        if (Math.sqrt(index) % 1 == 0) {
@@ -118,3 +110,14 @@ function inSoChinhPhuong(){
        }
     }
 }
+
+function inSo(fn){
+    for (var index = 1; index <= 100; index++) {
+        const dk = fn(index)
+        if (dk) console.log(index)
+     }
+}
+
+inSo(function(index){
+    return Math.sqrt(index) % 1 == 0
+})
