@@ -30,26 +30,26 @@
 //     console.log(key)
 // }
 
-var apartment = {
-  bedroom: {
-    area: 20,
-    bed: {
-      type: 'twin-bed',
-      price: 100
-    }
-  }
-};
+// var apartment = {
+//   bedroom: {
+//     area: 20,
+//     bed: {
+//       type: 'twin-bed',
+//       price: 100
+//     }
+//   }
+// };
 
-function getkey(apartment){
-    for (const key in apartment) {
-        console.log(key)
-        if (typeof apartment[key] == 'object'){
-            getkey(apartment[key])
-        }
-    }
-}
+// function getkey(apartment){
+//     for (const key in apartment) {
+//         console.log(key)
+//         if (typeof apartment[key] == 'object'){
+//             getkey(apartment[key])
+//         }
+//     }
+// }
 
-getkey(apartment)
+// getkey(apartment)
 
 /**
  * Kết quả mong muốn:
@@ -60,5 +60,42 @@ getkey(apartment)
  * price
  * Chú ý: không cần hiển thị ra đúng thứ tự như trên
  */
+
+// 11 : Array method
+// const arrNums = [1,2,3,4,5,6,7,8,9,10]
+
+// Them phan tu o cuoi mang
+// arrNums.push(11)
+// Xoa phan tu o cuoi mang
+// arrNums.pop()
+// Them phan tu o dau mang
+// arrNums.unshift(0)
+// Xoa phan tu o dau mang
+// arrNums.shift()
+// Xoa o giua
+// arrNums.splice(5,1)
+//Them o giua
+const arrNums = [2, 3, 1, 8, 9, 7]
+
+// const newArr = arrNums.concat(11,12,13)
+// console.log(newArr)
+// console.log(arrNums)
+
+// function removeEnd(arr, n) {
+//     arr.splice(arr.length - n, n)
+//     return arr
+// }
+
+// console.log(removeEnd([2, 3, 1, 8, 9, 7], 3));
+
+
+// Viết hàm JavaScript để lấy phần tử đầu tiên của mảng. Truyền tham số 'n' sẽ trả về các phần tử 'n' đầu tiên của mảng
+
+function first(arr, n) {
+  arr.splice(n , arr.length - n)
+  return arr
+}
+
+console.log(first([1, 2, 3], 1)); // expect [1, 2]
 
 
