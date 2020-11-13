@@ -75,7 +75,7 @@
 // Xoa o giua
 // arrNums.splice(5,1)
 //Them o giua
-const arrNums = [2, 3, 1, 8, 9, 7]
+// const arrNums = [2, 3, 1, 8, 9, 7]
 
 // const newArr = arrNums.concat(11,12,13)
 // console.log(newArr)
@@ -91,11 +91,32 @@ const arrNums = [2, 3, 1, 8, 9, 7]
 
 // Viết hàm JavaScript để lấy phần tử đầu tiên của mảng. Truyền tham số 'n' sẽ trả về các phần tử 'n' đầu tiên của mảng
 
-function first(arr, n) {
-  arr.splice(n , arr.length - n)
-  return arr
+// function first(arr, n) {
+//   arr.splice(n , arr.length - n)
+//   return arr
+// }
+
+// console.log(first([1, 2, 3], 1)); // expect [1, 2]
+
+//12 : Call la tham so
+// Ví dụ
+/**
+ * 1. Viết hàm double nhận vào 1 số bất kì, hiển thị ra số đó nhân đôi
+ * 2. Viết hàm sumAndDo nhận vào 1 array và 1 callback function. Hàm sumAndDo làm nhiệm vụ tính tổng array đó, sau đó gọi callback function với tham số là kết quả tổng vừa tính
+ */
+
+function double(num) {
+    return num * 2
 }
 
-console.log(first([1, 2, 3], 1)); // expect [1, 2]
+function sumAndDo(nums, callback) {
+    let result = 0
+    for (const iterator of nums) {
+        result += iterator
+    }
+    console.log(callback(result))
+}
+
+sumAndDo([1, 2, 3], double);
 
 
