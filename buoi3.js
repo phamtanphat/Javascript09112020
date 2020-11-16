@@ -95,28 +95,70 @@
 
 
 // Trả về số lượng người đã vote
-function totalVotes(arr) {
-    const countVotes =  arr.reduce(function(accumulator , currentValue){
-        if (currentValue.voted){
-            accumulator++
-        }
-        return accumulator
-    }, 0)
-    console.log(countVotes)
+// function totalVotes(arr) {
+//     const countVotes =  arr.reduce(function(accumulator , currentValue){
+//         if (currentValue.voted){
+//             accumulator++
+//         }
+//         return accumulator
+//     }, 0)
+//     console.log(countVotes)
+// }
+
+// var voters = [
+//   {name:'Bob' , age: 30, voted: true},
+//   {name:'Jake' , age: 32, voted: true},
+//   {name:'Kate' , age: 25, voted: false},
+//   {name:'Sam' , age: 20, voted: false},
+//   {name:'Phil' , age: 21, voted: true},
+//   {name:'Ed' , age:55, voted:true},
+//   {name:'Tami' , age: 54, voted:true},
+//   {name: 'Mary', age: 31, voted: false},
+//   {name: 'Becky', age: 43, voted: false},
+//   {name: 'Joey', age: 41, voted: true},
+//   {name: 'Jeff', age: 30, voted: true},
+//   {name: 'Zack', age: 19, voted: false}
+// ];
+// totalVotes(voters) // 7
+
+// 18 : Ham sort
+// const arrNames = [5,10,11,12,01,6,7]
+
+// const newArrNames = arrNames.sort(function(a , b){
+//     return b - a
+// });
+
+// a - b > 0 ( tang dan)
+// b - a > 0 ( nho dan)
+// console.log(newArrNames)
+
+// 19 : delete props object
+// const teo = {
+//     name : 'Nguyen Van Teo',
+//     age : 5,
+//     address : 'Quan 10'
+// }
+
+// delete teo.address
+// console.log(teo)
+
+// 20 : Prototypes object
+// function constructor : phuong thuc khoi tao
+
+function Person(name , age , address){
+    this.name = name
+    this.age = age 
+    this.address = address
+    this.showName = function(){
+        console.log(this.name)
+    }
 }
 
-var voters = [
-  {name:'Bob' , age: 30, voted: true},
-  {name:'Jake' , age: 32, voted: true},
-  {name:'Kate' , age: 25, voted: false},
-  {name:'Sam' , age: 20, voted: false},
-  {name:'Phil' , age: 21, voted: true},
-  {name:'Ed' , age:55, voted:true},
-  {name:'Tami' , age: 54, voted:true},
-  {name: 'Mary', age: 31, voted: false},
-  {name: 'Becky', age: 43, voted: false},
-  {name: 'Joey', age: 41, voted: true},
-  {name: 'Jeff', age: 30, voted: true},
-  {name: 'Zack', age: 19, voted: false}
-];
-totalVotes(voters) // 7
+Person.prototype.inFo = function(){
+    console.log("Name : " + this.name + " , Age : " + this.age + " , Address : "+this.address)
+}
+
+const teo = new Person("Teo",5,"Quan 10")
+const ti = new Person("Ti",5,"Quan 10")
+
+console.log(teo.inFo == ti.inFo)
