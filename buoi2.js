@@ -105,18 +105,18 @@
  * 2. Viết hàm sumAndDo nhận vào 1 array và 1 callback function. Hàm sumAndDo làm nhiệm vụ tính tổng array đó, sau đó gọi callback function với tham số là kết quả tổng vừa tính
  */
 
-function double(num) {
-    return num * 2
-}
+// function double(num) {
+//     return num * 2
+// }
 
-function sumAndDo(nums, callback) {
-    let result = 0
-    for (const iterator of nums) {
-        result += iterator
-    }
-    console.log(callback(result))
-}
+// function sumAndDo(nums, callback) {
+//     let result = 0
+//     for (const iterator of nums) {
+//         result += iterator
+//     }
+//     console.log(callback(result))
+// }
 
-sumAndDo([1, 2, 3], double);
+// sumAndDo([1, 2, 3], double);
 
 
