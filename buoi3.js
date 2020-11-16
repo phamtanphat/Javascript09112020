@@ -63,7 +63,23 @@
 
 const arrNames = ["Teo","Ti","Hoa","Phat","Lan","Khanh"]
 
-const newArrNames = arrNames.filter(function(value){
+// const newArrNames = arrNames.filter(function(value){
+//     return value.length == 3 ? true : false
+// })
+// console.log(newArrNames)
+
+Array.prototype.myFilter = function(cb){
+    const newArr = []
+    for (var i = 0 ; i < this.length ; i++){
+        const dk = cb(this[i] , i )
+        if (dk) {
+            newArr.push(this[i])
+        }
+    }
+    return newArr
+}
+
+const newArrNames = arrNames.myFilter(function(value){
     return value.length == 3 ? true : false
 })
 console.log(newArrNames)
