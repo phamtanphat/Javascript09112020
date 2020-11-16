@@ -61,25 +61,34 @@
 
 //16  : Ham filter
 
-const arrNames = ["Teo","Ti","Hoa","Phat","Lan","Khanh"]
+// const arrNames = ["Teo","Ti","Hoa","Phat","Lan","Khanh"]
 
 // const newArrNames = arrNames.filter(function(value){
 //     return value.length == 3 ? true : false
 // })
 // console.log(newArrNames)
 
-Array.prototype.myFilter = function(cb){
-    const newArr = []
-    for (var i = 0 ; i < this.length ; i++){
-        const dk = cb(this[i] , i )
-        if (dk) {
-            newArr.push(this[i])
-        }
-    }
-    return newArr
-}
+// Array.prototype.myFilter = function(cb){
+//     const newArr = []
+//     for (var i = 0 ; i < this.length ; i++){
+//         const dk = cb(this[i] , i )
+//         if (dk) {
+//             newArr.push(this[i])
+//         }
+//     }
+//     return newArr
+// }
 
-const newArrNames = arrNames.myFilter(function(value){
-    return value.length == 3 ? true : false
-})
-console.log(newArrNames)
+// const newArrNames = arrNames.myFilter(function(value){
+//     return value.length == 3 ? true : false
+// })
+// console.log(newArrNames)
+
+// 17 : Ham reduce
+const arrNums = [1,2,3,4,5,6,7,8,9,10]
+
+const newArrNums = arrNums.reduce(function(accumulator , currentValue){
+    return accumulator + currentValue
+},0)
+
+console.log(newArrNums)
