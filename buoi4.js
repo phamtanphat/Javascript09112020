@@ -65,21 +65,47 @@
 // var sayCoppy = mouse.sayhi.bind(mouse)
 // sayCoppy()
 
-function run(cb){
-    console.log('run...')
-    cb()
-  }
+// function run(cb){
+//     console.log('run...')
+//     cb()
+//   }
   
-const mouse = {
-    name : 'Mickey',
-    run : function() {
-        console.log(this.name + ' is running')
+// const mouse = {
+//     name : 'Mickey',
+//     run : function() {
+//         console.log(this.name + ' is running')
+//     }
+// }
+
+// run(mouse.run.bind(mouse))
+  
+// 25 : Arrow function
+
+// const arrNums = [1,3,5,7,9]
+
+// const newArrNums = arrNums.map(function(value){
+//     return value
+// })
+
+// const newArrNums = arrNums.map( value => {
+//     return value
+// })
+// console.log(newArrNums)
+
+const teo = {
+    name : "Nguyen Van teo",
+    showInFo : function(){
+        const showInFo2 = () => {
+            const showInFo3 = () => {
+                console.log(this.name)
+            }
+            showInFo3()
+        }
+        showInFo2()
     }
 }
+teo.showInFo()
 
-run(mouse.run.bind(mouse))
-  
-  
 
 
 
