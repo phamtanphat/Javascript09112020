@@ -31,7 +31,7 @@
 // random()
 // console.log(b)
 
-var a = 1;
+// var a = 1;
 
 // var b = {
 //   a: 2,
@@ -45,6 +45,13 @@ var a = 1;
 // var fooCopy = b.foo;
 // fooCopy();
 // console.log(this)
+
+// 23 : Phan biet var let const
+
+// if(true){
+//     let a = 10
+// }
+// console.log(a)
 
 
 
